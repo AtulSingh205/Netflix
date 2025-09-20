@@ -4,7 +4,7 @@ import Card from './Component/Card'
 
 const App = () => {
   let [Api,SetApi]=useState([])
-  let [search,SetSearch]=useState("")
+  let [search,SetSearch]=useState("");
 
   let chtai = Api.filter((itm)=>{
     if(search.toLowerCase()===""){
@@ -19,7 +19,7 @@ const App = () => {
     let Api_Key = "dd4ad9fd";
     let Store = await fetch(`https://www.omdbapi.com/?apikey=${Api_Key}&s=${search}`)
     let Result = await Store.json();
-    SetApi(Result.Search||[])
+    SetApi(Result.Search||[]);
   }
   console.log(search)
   console.log(Api)
