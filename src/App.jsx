@@ -8,7 +8,7 @@ const App = () => {
 
   let chtai = Api.filter((itm)=>{
     if(search.toLowerCase()===""){
-      return true;
+      return true
     }
     else{
       return itm.Title.toLowerCase().includes(search.toLowerCase())
