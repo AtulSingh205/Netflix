@@ -4,7 +4,7 @@ import Card from './Component/Card'
 
 const App = () => {
   let [Api,SetApi]=useState([])
-  let [search,SetSearch]=useState("");
+  let [search,SetSearch]=useState("")
 
   let chtai = Api.filter((itm)=>{
     if(search.toLowerCase()===""){
@@ -24,7 +24,7 @@ const App = () => {
   console.log(search)
   console.log(Api)
   useEffect(()=>{
-    fetchData();
+    fetchData()
   },[search])
   
   return (
