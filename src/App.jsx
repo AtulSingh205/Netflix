@@ -24,7 +24,7 @@ const App = () => {
   console.log(search)
   console.log(Api)
   useEffect(()=>{
-    fetchData()
+    fetchData();
   },[search])
   
   return (
