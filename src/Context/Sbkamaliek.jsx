@@ -8,7 +8,7 @@ const Sbkamaliek = () => {
 
   let chtai = Api.filter((itm)=>{
     if(search.toLowerCase()===""){
-      return true;
+      return true
     }
     else{
       return itm.Title.toLowerCase().includes(search.toLowerCase())
@@ -24,7 +24,7 @@ const Sbkamaliek = () => {
   console.log(search)
   console.log(Api)
   useEffect(()=>{
-    fetchData()
+    fetchData();
   },[search])
   
   return (
