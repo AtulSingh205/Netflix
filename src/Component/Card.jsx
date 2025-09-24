@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 const Card = () => {
-    const {chatai}=useContext(Store)
+    const {chtai}=useContext(Store)
     return (
         <div className=''>
             <div className='text-amber-100 h-[100px] w-[200px] rounded-2xl flex items-center flex-wrap'>
