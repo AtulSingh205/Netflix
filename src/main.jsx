@@ -5,10 +5,8 @@ import App from './App.jsx'
 import Sbkamaliek from './Context/Sbkamaliek.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <Sbkamaliek>
- <App />
+     <App />
     </Sbkamaliek>
    
-  </StrictMode>,
 )
