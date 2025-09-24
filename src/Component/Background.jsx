@@ -1,4 +1,6 @@
 import React from 'react'
+import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom'
+import Wishlist from './Wishlist'
 
 const Background = () => {
   return (
@@ -14,6 +16,8 @@ const Background = () => {
         <option className='bg-black'>Hindi</option>
         </select> 
         <button className='mr-4 h-8 w-20 border-2 rounded-[5px] bg-red-600'>Sign in</button>
+    
+       {/* <Link to='/Wishlist' className='text-white underline'>Wishlist</Link> */}
         </div>
       </nav>
     </div>

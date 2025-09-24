@@ -8,8 +8,11 @@ import Background from './Component/Background'
   return (
     <div>
       <Background />
-      <Search />
-      <Card />
+        {/* <Routes>
+        <Route path="/wishlist" element={<Wishlist />} />
+      </Routes> */}
+      <Search/>
+      <Card/>
     </div>
   );
 };
