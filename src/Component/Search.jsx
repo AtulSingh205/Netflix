@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Store } from '../Context/Sbkamaliek'
 
-const Search = ({ SetSearch ,search }) => {
+const Search = () => {
+  const {search,SetSearch}=useContext(Store)
   return (
     <div>
-      <div className='flex flex-col items-center justify-center'>
+      <div className='flex flex-col items-center justify-center relative'>
           <div className='font-bold text-amber-100 text-3xl flex flex-col items-center '>
         <h1>Unlimited movies, TV shows</h1>
         <h1>and more</h1>
