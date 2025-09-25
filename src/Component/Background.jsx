@@ -17,7 +17,7 @@ const Background = () => {
         </select> 
         <button className='mr-4 h-8 w-20 border-2 rounded-[5px] bg-red-600'>Sign in</button>
     
-       {/* <Link to='/Wishlist' className='text-white underline'>Wishlist</Link> */}
+       <Link to='/Wishlist' className='text-white underline'>Wishlist</Link>
         </div>
       </nav>
     </div>

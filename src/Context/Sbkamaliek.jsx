@@ -5,6 +5,7 @@ export const Store = createContext(null);
 const Sbkamaliek = (props) => {
   const [Api, SetApi] = useState([]);
   const [search, SetSearch] = useState("");
+  const [wishAdd,setWish] = useState([])
 
   const chtai = Api.filter((itm) => {
     if (search.toLowerCase() === "") return true;
@@ -23,7 +24,7 @@ const Sbkamaliek = (props) => {
   }, [search]);
 
   return (
-    <Store.Provider value={{ Api, SetApi, search, SetSearch, chtai }}>
+    <Store.Provider value={{ Api, SetApi, search, SetSearch, chtai ,wishAdd,setWish}}>
       {props.children}
     </Store.Provider>
   );
