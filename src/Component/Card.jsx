@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Store } from "../Context/Sbkamaliek";
 
 const Card = () => {
-  const { chtai } = useContext(Store);
+  const { chtai,SetApi} = useContext(Store);
   function handelId(ID){
-    let togel =  chtai.map((itm)=>itm.imdbID == ID ? {...chtai,isChange:true}:itm)
+    let togel =  chtai.map((itm)=>itm.imdbID == ID ? {...itm,isChangw:!itm.isChangw}:itm)
+    SetApi(togel);
   }
 
   return (
@@ -23,7 +24,7 @@ const Card = () => {
             <h1 className="text-lg font-semibold text-center">{val.Title}</h1>
             <p className="text-sm text-gray-300 mb-2">Year: {val.Year}</p>
             <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium" onClick={()=>handelId(val.imdbIDid)}>
-              {val.id ? "Add to wishlist" : "Remove"}
+              {val.isChangw ? "Add to wishlist" : "Remove"}
             </button>
           </div>
         ))}
