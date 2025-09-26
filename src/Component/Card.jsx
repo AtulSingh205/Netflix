@@ -2,10 +2,23 @@ import React, { useContext } from "react";
 import { Store } from "../Context/Sbkamaliek";
 
 const Card = () => {
-  const { chtai,SetApi} = useContext(Store);
+  const { chtai,SetApi,wishAdd,setWish} = useContext(Store);
   function handelId(ID){
     let togel =  chtai.map((itm)=>itm.imdbID == ID ? {...itm,isChangw:!itm.isChangw}:itm)
     SetApi(togel);
+    
+    let clickitm = chtai.find((itm)=>itm.imdbID==ID)
+    if(clickitm){
+      if(wishAdd.find((item)=>item.imdbID==ID)){
+          let remove = wishAdd.filter((itm)=>itm.imdbID!=ID)
+          setWish(remove)
+      }
+      else{
+        setWish([...wishAdd,clickitm])
+      }
+    }
+    // setWish([...wishAdd,clickitm])
+    console.log("hh chl rh hai ")
   }
 
   return (
@@ -23,7 +36,7 @@ const Card = () => {
             />
             <h1 className="text-lg font-semibold text-center">{val.Title}</h1>
             <p className="text-sm text-gray-300 mb-2">Year: {val.Year}</p>
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium" onClick={()=>handelId(val.imdbIDid)}>
+            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium" onClick={()=>  handelId(val.imdbID)}>
               {val.isChangw ? "Add to wishlist" : "Remove"}
             </button>
           </div>

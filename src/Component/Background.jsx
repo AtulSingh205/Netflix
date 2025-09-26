@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom'
 import Wishlist from './Wishlist'
+import { Store } from '../Context/Sbkamaliek'
 
 const Background = () => {
+  const {wishAdd}=useContext(Store)
   return (
     <div>
       <div className='absolute'>
@@ -19,10 +21,10 @@ const Background = () => {
 
           <Link
             to="/wishlist"
-            className="relative text-white font-medium group mr-5"
-          >
+            className="relative text-white font-medium group mr-5   "
+          ><h1 className='h-5 w-5 rounded-full bg-red-500 ml-9 animate-bounce ease-in-out flex items-center justify-center '>{wishAdd.length}</h1>
             Wishlist
-            <span className="absolute left-0 bottom-7 w-0 h-0.5 bg-red-700 group-hover:w-full transition-all"></span>
+            <span className="absolute left-0 bottom-1 w-0 h-0.5 bg-red-700 group-hover:w-full transition-all"></span>
           </Link>
 
 

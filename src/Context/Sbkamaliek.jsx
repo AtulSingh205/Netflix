@@ -19,7 +19,7 @@ const Sbkamaliek = (props) => {
     let Update = (Result.Search||[]).map((item)=>({...item,isChangw:true}))
     SetApi(Update)
   }
-
+ console.log(wishAdd)
   useEffect(() => {
     fetchData();
   }, [search]);
