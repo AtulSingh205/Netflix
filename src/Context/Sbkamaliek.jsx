@@ -4,8 +4,8 @@ export const Store = createContext(null);
 
 const Sbkamaliek = (props) => {
   const [Api, SetApi] = useState([]);
-  const [search, SetSearch] = useState("");
-  const [wishAdd,setWish] = useState([]);
+  const [search, SetSearch] = useState("")
+  const [wishAdd,setWish] = useState([])
 
   const chtai = Api.filter((itm) => {
     if (search.toLowerCase() === "") return true;
@@ -19,7 +19,7 @@ const Sbkamaliek = (props) => {
     let Update = (Result.Search||[]).map((item)=>({...item,isChangw:true}));
     SetApi(Update);
   }
- console.log(wishAdd)
+ console.log(wishAdd);
   useEffect(() => {
     fetchData();
   }, [search]);
