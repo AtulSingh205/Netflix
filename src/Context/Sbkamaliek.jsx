@@ -5,7 +5,7 @@ export const Store = createContext(null);
 const Sbkamaliek = (props) => {
   const [Api, SetApi] = useState([]);
   const [search, SetSearch] = useState("");
-  const [wishAdd,setWish] = useState([])
+  const [wishAdd,setWish] = useState([]);
 
   const chtai = Api.filter((itm) => {
     if (search.toLowerCase() === "") return true;
