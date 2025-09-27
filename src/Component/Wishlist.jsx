@@ -6,9 +6,9 @@ const Wishlist = () => {
   function RemoveId(ID){
     let togel=wishAdd.map((item)=>item.imdbID==ID ? {...item,ischangw:!item.ischangw}:item)
        SetApi(togel)
-      let remove = wishAdd.filter((itm)=>itm.imdbID!==ID)
+      let remove = wishAdd.filter((itm)=>itm.imdbID!==ID);
       setWish(remove)
-      console.log("h remove hogya ")
+      console.log("h remove hogya ");
   }
   return (
     <div className='h-screen w-screen bg-gray-700 flex '>
