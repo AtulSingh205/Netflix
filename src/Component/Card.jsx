@@ -18,7 +18,7 @@ const Card = () => {
       }
     }
     // setWish([...wishAdd,clickitm])
-    console.log("hh chl rh hai ")
+    console.log("hh chl rh hai ");
   }
 
   return (

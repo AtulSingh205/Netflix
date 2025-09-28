@@ -4,7 +4,7 @@ import Wishlist from './Wishlist'
 import { Store } from '../Context/Sbkamaliek'
 
 const Background = () => {
-  const {wishAdd}=useContext(Store)
+  const {wishAdd}=useContext(Store);
   return (
     <div>
       <div className='absolute'>
