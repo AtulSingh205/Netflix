@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Store } from '../Context/Sbkamaliek'
 
 const Wishlist = () => {
-  const {wishAdd,setWish,SetApi}=useContext(Store)
+  const {wishAdd,setWish,SetApi}=useContext(Store);
   function RemoveId(ID){
     let togel=wishAdd.map((item)=>item.imdbID==ID ? {...item,ischangw:!item.ischangw}:item)
        SetApi(togel);
@@ -34,4 +34,4 @@ const Wishlist = () => {
   )
 }
 
-export default Wishlist
+export default Wishlist
