@@ -11,10 +11,10 @@ const Card = () => {
     if(clickitm){
       if(wishAdd.find((item)=>item.imdbID==ID)){
           let remove = wishAdd.filter((itm)=>itm.imdbID!=ID)
-          setWish(remove)
+          setWish(remove);
       }
       else{
-        setWish([...wishAdd,clickitm])
+        setWish([...wishAdd,clickitm]);
       }
     }
     // setWish([...wishAdd,clickitm])
