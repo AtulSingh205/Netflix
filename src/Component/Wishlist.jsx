@@ -5,9 +5,9 @@ const Wishlist = () => {
   const {wishAdd,setWish,SetApi}=useContext(Store)
   function RemoveId(ID){
     let togel=wishAdd.map((item)=>item.imdbID==ID ? {...item,ischangw:!item.ischangw}:item)
-       SetApi(togel)
+       SetApi(togel);
       let remove = wishAdd.filter((itm)=>itm.imdbID!==ID);
-      setWish(remove)
+      setWish(remove);
       console.log("h remove hogya ");
   }
   return (
@@ -34,4 +34,4 @@ const Wishlist = () => {
   )
 }
 
-export default Wishlist
+export default Wishlist
