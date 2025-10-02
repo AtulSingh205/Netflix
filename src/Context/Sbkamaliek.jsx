@@ -13,13 +13,13 @@ const Sbkamaliek = (props) => {
   });
 
   async function fetchData() {
-    let Api_Key = "dd4ad9fd";
+    let Api_Key = "dd4ad9fd"
     let res = await fetch(`https://www.omdbapi.com/?apikey=${Api_Key}&s=${search}`);
     let Result = await res.json();
     let Update = (Result.Search||[]).map((item)=>({...item,isChangw:true}))
     SetApi(Update)
   }
- console.log(wishAdd);
+ console.log(wishAdd)
   useEffect(() => {
     fetchData();
   }, [search]);
