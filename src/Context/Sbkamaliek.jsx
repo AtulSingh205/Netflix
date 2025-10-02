@@ -4,24 +4,24 @@ export const Store = createContext(null);
 
 const Sbkamaliek = (props) => {
   const [Api, SetApi] = useState([]);
-  const [search, SetSearch] = useState("");
-  const [wishAdd,setWish] = useState([]);
+  const [search, SetSearch] = useState("")
+  const [wishAdd,setWish] = useState([])
 
   const chtai = Api.filter((itm) => {
-    if (search.toLowerCase() === "") return true;
-    return itm.Title.toLowerCase().includes(search.toLowerCase());
+    if (search.toLowerCase() === "") return true
+    return itm.Title.toLowerCase().includes(search.toLowerCase())
   });
 
   async function fetchData() {
     let Api_Key = "dd4ad9fd"
     let res = await fetch(`https://www.omdbapi.com/?apikey=${Api_Key}&s=${search}`);
-    let Result = await res.json();
+    let Result = await res.json()
     let Update = (Result.Search||[]).map((item)=>({...item,isChangw:true}))
     SetApi(Update)
   }
  console.log(wishAdd);
   useEffect(() => {
-    fetchData();
+    fetchData()
   }, [search])
 
   return (
