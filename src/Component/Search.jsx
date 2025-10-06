@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Store } from '../Context/Sbkamaliek'
+import { HiHome ,IoIosSearch, } from "react-icons/hi";
 
 const Search = () => {
   const {search,SetSearch}=useContext(Store)
