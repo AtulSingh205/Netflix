@@ -10,7 +10,7 @@ const Card = () => {
     let clickitm = chtai.find((itm)=>itm.imdbID==ID)
     if(clickitm){
       if(wishAdd.find((item)=>item.imdbID==ID)){
-          let remove = wishAdd.filter((itm)=>itm.imdbID!=ID)
+          let remove = wishAdd.filter((itm)=>itm.imdbID!=ID);
           setWish(remove);
       }
       else{
